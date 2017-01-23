@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<hmtl>
+<head>
+<script lang="Javascript" type="text/javascript">
+            function ValidateEmail(EmailAddress){
+                var loc = EmailAddress.indexOf('@','.')
+                if (loc == -1){
+                    alert("Invalid Email ENKKKKK!")
+                }
+            }
+            function display(){
+                var v = document.forms.unor.Email.value
+                document.forms.unor.output.value = v
+            }
+        </script>
+</head>
+<title>Working with forms</title>
+
+<fieldset>
+<table align="center" border="1">
+  
+      
+    <tr align="center">
+      
+    <td colspan="2">INPUT ELEMENTS</td>
+    </tr>
+
+ 
+   <tr align="center"></tr>    
+    <td>FirstName:<br><input type="text" name="firstname"><br></td>
+    <td>LastName:<br><input type="text" name="lastname"><br></td>
+    
+      
+    <tr align="center">
+        <td rowspan="4">COMPUTER</td></tr>    
+    <tr>
+        <td><input type="checkbox" name="desktop" value="desktop">Desktop Computers</td><br></tr>
+      <tr><td><input type="checkbox" name="notebook" value="notebook"> Notebook Laptops</td><br></tr>
+      <tr><td><input type="checkbox" name="netbook" value="netbook">Netbook Laptops</td><br></tr>
+
+        
+    
+    <tr align="center">
+        <td rowspan="4">Operating System</td></tr>
+    <tr>  
+        <td><input type="radio" name="w7" value="w7">Windows 7<br></td> </tr>  
+    <tr>
+      <td><input type="radio" name="w8.1" value="w8.1">Windows 8.1<br></td>    
+    </tr>
+       <tr>
+      <td><input type="radio" name="w10" value="w10">Windows 10<br></td>    
+    </tr> 
+    
+
+    
+    
+    <tr align="center">
+        <td colspan="2">
+            <select>
+                <option value="choose">please choose one</option>
+                <option value="300">$300 to $900</option>
+                <option value="1000">$1000 to $2000</option>
+                <option value="2000">$2000 or more</option>
+        </select>
+        </td>    
+        
+        
+        </tr>
+      <tr align="center">
+
+       <td> <form name="unor">
+        Email: <input type="text" name="Email" 
+onblur="ValidateEmail(this.value)"/><br>
+        Output: <input type="text" name="output"
+disabled=true/><br>
+        <input type="button" value="Submit"
+onclick="display()"/>
+        <input type="reset" value="Reset"/>
+        </form>
+    </td>
+    </tr>
+    </table>    
+   
+
+    </fieldset>
+   
+
+
+
+</hmtl>
